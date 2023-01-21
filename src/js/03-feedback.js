@@ -7,9 +7,9 @@ const ref = {
   messageField: document.querySelector('textarea'),
   forms: document.querySelector('.feedback-form'),
 };
-
-ref.emailField.addEventListener('input', throttle(setLocalStorage, 500));
-ref.messageField.addEventListener('input', throttle(setLocalStorage, 500));
+ref.forms.addEventListener('input', throttle(setLocalStorage, 500));
+// ref.emailField.addEventListener('input', throttle(setLocalStorage, 500));
+// ref.messageField.addEventListener('input', throttle(setLocalStorage, 500));
 
 ref.forms.addEventListener('submit', function (event) {
   event.preventDefault();
